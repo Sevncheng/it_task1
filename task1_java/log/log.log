@@ -1,0 +1,5 @@
+2017-10-06 20:39:26 [ main ] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@58c1670b: startup date [Fri Oct 06 20:39:26 CST 2017]; root of context hierarchy
+  2017-10-06 20:39:26 [ main ] Loading XML bean definitions from class path resource [applicationContext.xml]
+  2017-10-06 20:39:32 [ MLog-Init-Reporter ] MLog clients using log4j logging.
+  2017-10-06 20:39:37 [ main ] Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  

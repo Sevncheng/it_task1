@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.user">
+
+
+    <resultMap type="cn.task1.entity.User" id="myuser">
+        <id property="userId" column="userId"/>
+        <result property="userName" column="userName"/>
+        <result property="userCreate_at" column="userCreate_at"/>
+        <result property="userUpdate_at" column="userUpdate_at"/>
+        <result property="userQq" column="userQq"/>
+        <result property="userChoiceType" column="userChoiceType"/>
+        <result property="userEntranceTime" column="userEntranceTime"/>
+        <result property="userGraduationSchool" column="userGraduationSchool"/>
+        <result property="userDailyUrl" column="userDailyUrl"/>
+        <result property="userDesire" column="userDesire"/>
+        <result property="usersBrother" column="usersBrother"/>
+    </resultMap>
+
+    <insert id="add"  parameterType="cn.task1.entity.User">
+        insert into task1_user(userId,userName) values (#{userId},#{userName});
+    </insert>
+
+
+    <delete id="delete" parameterType="cn.task1.entity.User">
+        delete from  task1_user where userId = #{userId};
+    </delete>
+
+
+    <update id="update" parameterType="cn.task1.entity.User">
+         update task1_user set userName = #{userName} where userId = #{userId}
+    </update>
+
+    <select id="findAll"  resultType="cn.task1.entity.User">
+          select userId,userName from task1_user ;
+    </select>
+
+    <select id="findById" parameterType="int" resultType="cn.task1.entity.User">
+        select userId,userName from task1_user where userId=#{id};
+    </select>
+
+    <select id="findByName" parameterType="String" resultType="cn.task1.entity.User">
+        select userId,userName from task1_user where userName=#{name} ;
+    </select>
+</mapper>
